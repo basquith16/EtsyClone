@@ -13,14 +13,11 @@ body {
   background-color: #FFFFFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 0;
 }
 
 .content {
-  flex-direction: column;
   margin: 40px 10px 0 40px;
   width: 40%;
   font-family: Myriad Pro;
@@ -64,8 +61,6 @@ ul li {
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid #E1E3E0;
 }
@@ -88,11 +83,11 @@ margin: 25px 0 0 100px;
   align-content: center;
 }
 
-.logAndSearch {
+#logAndSearch {
   font-size: 26px;
-  margin: -25px 0 0 0;
   font-family: 'Noto Serif', serif;
   color: #F56300;
+  margin: -1% 0 0 0;
 }
 
 a {
@@ -121,4 +116,34 @@ a {
   background-size: cover;
   border: 2px solid black;
   padding-bottom:80px;
+}
+
+.nav-right {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#searchBar {
+  height: 28px;
+  width: 200px;
+  padding-bottom: 1px;
+  font-size: 14px;
+}
+
+#searchButton {
+  background-color: #40a7c7;
+  height: 28px;
+  border-radius: 0px;
+  margin-top: 3px;
+  font-size: 14px;
+  padding: 2px 5px 10px 5px;
+}
+
+.signIn {
+  border-color: #40a7c7;
+  color: #40a7c7;
+}
+
+#signIn {
+
 }
