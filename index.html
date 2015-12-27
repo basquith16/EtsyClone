@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Etsy</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="styles/main.css">
     <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
   </head>
-  <body>
-    <nav>
-      <div class="logAndSearch">
-        <h1>Etsy</h1>
-      </div>
-      <div class="linksAndCart">
-        <a href="#">Sell on Etsy</a>
-        <a href="#">Register</a>
-        <a href="#" class="signIn">Sign in</a>
-        <a href="#">Cart</a>
-      </div>
-    </nav>
+    <body>
+      <header>
+        <nav class="navbar navbar-default" id="logAndSearch">
+          <div class="container">
+              <ul class="nav nav-justified">
+          <li><h1>Etsy</h1></li>
+          <li><input type="text" name="name" value="" placeholder="Search for items or shops"id="searchBar"><button class="btn btn-success text-center" id="searchButton" type="button">Search</button></li>
+          <li><a href="#">Sell on Etsy</a></li>
+          <li><a href="#">Register</a></li>
+          <li id="signIn"><button type="button" class="btn btn-default signIn">Sign in</button></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+    </div>
+    </header>
     <div class="navLinks" style="margin-left: 100px;">
       <a href="#">Clothing &amp; Accessories</a>
       <a href="#">Jewelry</a>
@@ -37,17 +41,21 @@
 
     <div class="content">
     </div>
-
-
     <script type="text/template" id="showListing">
       <div class="etsyItem">
-        <div class="title"><%= title %> </div>
-        <div class="price"><%= price %><%= currency_code %> </div>
-        <div class="description"><span>Description:</span><%= description %> </div>
-        <div class="views"><span>Views:</span><%= views %> </div>
-        <div class="quantity"><span>Quantity Left:</span><%= quantity %> </div>
-        <div class="user"><span>User:</span><%= user_id %></div>
-        <div class="state"><span>Currently:</span><%= state %></div>
+        <div class="row">
+          <div class="col-sm-4">
+            <ul>
+              <li class="title"><%= title %> </li>
+              <li class="price"><%= price %><%= currency_code %> </li>
+              <li class="description"><span>Description:</span><%= description %> </li>
+              <li class="views"><span>Views:</span><%= views %> </li>
+              <li class="quantity"><span>Quantity Left:</span><%= quantity %> </li>
+              <li class="user"><span>User:</span><%= user_id %></li>
+              <li class="state"><span>Currently:</span><%= state %></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </script>
 
